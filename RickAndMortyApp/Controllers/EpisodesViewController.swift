@@ -13,6 +13,9 @@ final class EpisodesViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .red.withAlphaComponent(1)
         title = "Episode View"
+        APIHanlder.instance.request(endpoint: .character) { url in
+            print(url)
+        }
     }
     
 }
