@@ -19,7 +19,7 @@ enum URLManager: CustomStringConvertible {
         case .location:
             return "location"
         case .episode:
-            return "episode "
+            return "episode"
         }
     }
 }

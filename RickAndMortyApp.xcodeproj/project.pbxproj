@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF54F690296D73E2006D433A /* ErrorCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54F68F296D73E2006D433A /* ErrorCases.swift */; };
 		FF5E7BF72961E21F00A0D39F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5E7BF62961E21F00A0D39F /* AppDelegate.swift */; };
 		FF5E7BF92961E21F00A0D39F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5E7BF82961E21F00A0D39F /* SceneDelegate.swift */; };
 		FF5E7BFB2961E21F00A0D39F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5E7BFA2961E21F00A0D39F /* TabBarController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF54F68F296D73E2006D433A /* ErrorCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCases.swift; sourceTree = "<group>"; };
 		FF5E7BF32961E21F00A0D39F /* RickAndMortyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5E7BF62961E21F00A0D39F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF5E7BF82961E21F00A0D39F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				FFEA0E86296AEF83007C6273 /* URLManager.swift */,
 				FFEA0E88296AFC12007C6273 /* APIHandler.swift */,
 				FFEA0E8A296AFD34007C6273 /* NetworkRequestBuilder.swift */,
+				FF54F68F296D73E2006D433A /* ErrorCases.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				FF5E7C112961E90D00A0D39F /* CharacterViewController.swift in Sources */,
 				FFEA0E8D296AFFFB007C6273 /* CharactersModel.swift in Sources */,
 				FFEA0E89296AFC12007C6273 /* APIHandler.swift in Sources */,
+				FF54F690296D73E2006D433A /* ErrorCases.swift in Sources */,
 				FFEA0E87296AEF83007C6273 /* URLManager.swift in Sources */,
 				FFEA0E95296B20C7007C6273 /* CharacterGender.swift in Sources */,
 				FF5E7BFB2961E21F00A0D39F /* TabBarController.swift in Sources */,

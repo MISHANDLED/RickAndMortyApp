@@ -21,11 +21,11 @@ class NetworkRequestBuilder {
         if !id.isEmpty { url += "/\(id)" }
         
         if !params.isEmpty {
-            url += "?"
+            url.append("?")
             let queryParams = params.compactMap { key, value in
                 return "\(key)=\(value)"
             }.joined(separator: "&")
-            url += queryParams
+            url.append(queryParams)
         }
 
         return url

@@ -13,8 +13,14 @@ final class EpisodesViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .red.withAlphaComponent(1)
         title = "Episode View"
-        APIHanlder.instance.request(endpoint: .character) { url in
-            print(url)
+        
+        APIHanlder.instance.request(endpoint: .episode, expecting: EpisodesResult.self) { result in
+            switch result {
+            case .success(let response):
+                print("response is good")
+            case .failure(let error):
+                print("Something went wrong \(error)")
+            }
         }
     }
     
