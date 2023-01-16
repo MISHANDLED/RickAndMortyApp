@@ -50,11 +50,17 @@ final class TabBarController: UITabBarController {
         var vc: UIViewController {
             switch self {
             case .characters:
-                return CharacterViewController()
+                let storyboard = UIStoryboard(name: "CharacterStoryboard", bundle: nil)
+                let createdVC = storyboard.instantiateViewController(withIdentifier: "CharacterStoryboard")
+                return createdVC
             case .locations:
-                return LocationViewController()
+                let storyboard = UIStoryboard(name: "LocationStoryboard", bundle: nil)
+                let createdVC = storyboard.instantiateViewController(withIdentifier: "LocationStoryboard")
+                return createdVC
             case .episodes:
-                return EpisodesViewController()
+                let storyboard = UIStoryboard(name: "EpisodeStoryboard", bundle: nil)
+                let createdVC = storyboard.instantiateViewController(withIdentifier: "EpisodeStoryboard")
+                return createdVC
             }
         }
         

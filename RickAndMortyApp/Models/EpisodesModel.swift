@@ -10,7 +10,7 @@ import Foundation
 
 struct EpisodesResult: Decodable {
     let results: [SeriesEpisode]?
-    let next: String?
+    let info: AdditionalInfo?
     
     struct SeriesEpisode: Decodable {
         let id: Int?
@@ -26,5 +26,14 @@ struct EpisodesResult: Decodable {
             case episodeAnn = "episode"
             case characters
         }
+    }
+    
+    struct AdditionalInfo: Decodable {
+        let next: String?
+    }
+    
+    private enum CodingKeys: String, CodingKey {
+        case results
+        case info
     }
 }

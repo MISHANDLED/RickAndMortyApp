@@ -11,7 +11,7 @@ final class CharacterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red.withAlphaComponent(0.1)
+        view.backgroundColor = .red.withAlphaComponent(1)
         title = "Character View"
         
         APIHanlder.instance.request(endpoint: .character, expecting: EpisodesResult.self) { result in
@@ -22,7 +22,5 @@ final class CharacterViewController: UIViewController {
                 print("Something went wrong \(error)")
             }
         }
-        
     }
-    
 }

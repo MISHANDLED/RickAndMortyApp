@@ -1,5 +1,5 @@
 //
-//  EpisodesViewController.swift
+//  LocationViewController.swift
 //  RickAndMortyApp
 //
 //  Created by Devansh Mohata on 01/01/23.
@@ -7,14 +7,14 @@
 
 import UIKit
 
-final class EpisodesViewController: UIViewController {
+final class LocationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red.withAlphaComponent(1)
-        title = "Episode View"
+        title = "Location View"
         
-        APIHanlder.instance.request(endpoint: .episode, expecting: EpisodesResult.self) { result in
+        APIHanlder.instance.request(endpoint: .location, expecting: EpisodesResult.self) { result in
             switch result {
             case .success(let response):
                 print("response is good")
@@ -22,6 +22,7 @@ final class EpisodesViewController: UIViewController {
                 print("Something went wrong \(error)")
             }
         }
+        
     }
     
 }

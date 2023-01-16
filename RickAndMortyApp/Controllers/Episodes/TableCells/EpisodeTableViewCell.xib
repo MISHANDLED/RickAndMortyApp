@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="122" id="KGk-i7-Jjw" customClass="EpisodeTableViewCell" customModule="RickAndMortyApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="438" height="122"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="438" height="122"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wik-Gf-zwL" userLabel="Annontation">
+                        <rect key="frame" x="10" y="9.9999999999999982" width="41.333333333333336" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="385-3P-iux" userLabel="Air Date">
+                        <rect key="frame" x="386.66666666666669" y="9.9999999999999982" width="41.333333333333314" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocK-zU-CBb" userLabel="Name">
+                        <rect key="frame" x="10" y="90.666666666666671" width="41.333333333333336" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8z-CJ-Gub">
+                        <rect key="frame" x="10" y="121" width="418" height="1"/>
+                        <color key="backgroundColor" red="0.74117647058823533" green="0.74117647058823533" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="oYN-Z7-Rma"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ocK-zU-CBb" firstAttribute="leading" secondItem="wik-Gf-zwL" secondAttribute="leading" id="2yq-Bz-9Hi"/>
+                    <constraint firstItem="385-3P-iux" firstAttribute="centerY" secondItem="wik-Gf-zwL" secondAttribute="centerY" id="3za-Fm-1o1"/>
+                    <constraint firstItem="385-3P-iux" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wik-Gf-zwL" secondAttribute="trailing" constant="10" id="L28-8F-pd2"/>
+                    <constraint firstItem="d8z-CJ-Gub" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Lfp-E1-T4w"/>
+                    <constraint firstItem="ocK-zU-CBb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="wik-Gf-zwL" secondAttribute="bottom" constant="10" id="MCq-wD-QOG"/>
+                    <constraint firstItem="wik-Gf-zwL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="bTC-M6-g4h"/>
+                    <constraint firstAttribute="bottom" secondItem="d8z-CJ-Gub" secondAttribute="bottom" id="byY-AX-dTj"/>
+                    <constraint firstAttribute="trailing" secondItem="d8z-CJ-Gub" secondAttribute="trailing" constant="10" id="hQr-Yb-rZJ"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ocK-zU-CBb" secondAttribute="trailing" constant="10" id="nF0-KJ-c4Q"/>
+                    <constraint firstItem="d8z-CJ-Gub" firstAttribute="top" secondItem="ocK-zU-CBb" secondAttribute="bottom" constant="10" id="ssW-Hc-xIt"/>
+                    <constraint firstAttribute="trailing" secondItem="385-3P-iux" secondAttribute="trailing" constant="10" id="t0b-wN-rqb"/>
+                    <constraint firstItem="wik-Gf-zwL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ynJ-Zh-oeh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="episodeAirDate" destination="385-3P-iux" id="LS2-4I-Wrl"/>
+                <outlet property="episodeAnnotation" destination="wik-Gf-zwL" id="jrd-k9-OCk"/>
+                <outlet property="episodeName" destination="ocK-zU-CBb" id="vqV-Ov-gIp"/>
+            </connections>
+            <point key="canvasLocation" x="221.37404580152671" y="31.690140845070424"/>
+        </tableViewCell>
+    </objects>
+</document>

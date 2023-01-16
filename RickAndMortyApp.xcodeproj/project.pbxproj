@@ -16,6 +16,12 @@
 		FF5E7C112961E90D00A0D39F /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5E7C102961E90D00A0D39F /* CharacterViewController.swift */; };
 		FF5E7C132961E91600A0D39F /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5E7C122961E91600A0D39F /* LocationViewController.swift */; };
 		FF5E7C172961E93C00A0D39F /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5E7C162961E93C00A0D39F /* EpisodesViewController.swift */; };
+		FFC018F82972F3B0001A9E92 /* CharacterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC018F72972F3B0001A9E92 /* CharacterStoryboard.storyboard */; };
+		FFC018FB2972F66C001A9E92 /* EpisodeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC018FA2972F66C001A9E92 /* EpisodeStoryboard.storyboard */; };
+		FFC018FE2972F72E001A9E92 /* LocationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC018FD2972F72E001A9E92 /* LocationStoryboard.storyboard */; };
+		FFC019022973F892001A9E92 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC019002973F892001A9E92 /* EpisodeTableViewCell.swift */; };
+		FFC019032973F892001A9E92 /* EpisodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC019012973F892001A9E92 /* EpisodeTableViewCell.xib */; };
+		FFC0190629745F15001A9E92 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0190529745F15001A9E92 /* UITableViewExtension.swift */; };
 		FFEA0E87296AEF83007C6273 /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEA0E86296AEF83007C6273 /* URLManager.swift */; };
 		FFEA0E89296AFC12007C6273 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEA0E88296AFC12007C6273 /* APIHandler.swift */; };
 		FFEA0E8B296AFD34007C6273 /* NetworkRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEA0E8A296AFD34007C6273 /* NetworkRequestBuilder.swift */; };
@@ -38,6 +44,12 @@
 		FF5E7C102961E90D00A0D39F /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
 		FF5E7C122961E91600A0D39F /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		FF5E7C162961E93C00A0D39F /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
+		FFC018F72972F3B0001A9E92 /* CharacterStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CharacterStoryboard.storyboard; sourceTree = "<group>"; };
+		FFC018FA2972F66C001A9E92 /* EpisodeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EpisodeStoryboard.storyboard; sourceTree = "<group>"; };
+		FFC018FD2972F72E001A9E92 /* LocationStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationStoryboard.storyboard; sourceTree = "<group>"; };
+		FFC019002973F892001A9E92 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
+		FFC019012973F892001A9E92 /* EpisodeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeTableViewCell.xib; sourceTree = "<group>"; };
+		FFC0190529745F15001A9E92 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		FFEA0E85296AE9B4007C6273 /* Swift.gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = Swift.gitignore; sourceTree = "<group>"; };
 		FFEA0E86296AEF83007C6273 /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
 		FFEA0E88296AFC12007C6273 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
@@ -79,6 +91,7 @@
 		FF5E7BF52961E21F00A0D39F /* RickAndMortyApp */ = {
 			isa = PBXGroup;
 			children = (
+				FFC019042974529E001A9E92 /* Extensions */,
 				FFEA0E85296AE9B4007C6273 /* Swift.gitignore */,
 				FF5E7C042961E22000A0D39F /* Info.plist */,
 				FF5E7C0F2961E64600A0D39F /* APIClient */,
@@ -120,10 +133,10 @@
 		FF5E7C0D2961E5CE00A0D39F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FFC018FC2972F715001A9E92 /* Locations */,
+				FFC018F92972F64D001A9E92 /* Episodes */,
+				FFC018F42972F2F0001A9E92 /* Characters */,
 				FF5E7BFA2961E21F00A0D39F /* TabBarController.swift */,
-				FF5E7C102961E90D00A0D39F /* CharacterViewController.swift */,
-				FF5E7C122961E91600A0D39F /* LocationViewController.swift */,
-				FF5E7C162961E93C00A0D39F /* EpisodesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -148,6 +161,51 @@
 				FF54F68F296D73E2006D433A /* ErrorCases.swift */,
 			);
 			path = APIClient;
+			sourceTree = "<group>";
+		};
+		FFC018F42972F2F0001A9E92 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				FF5E7C102961E90D00A0D39F /* CharacterViewController.swift */,
+				FFC018F72972F3B0001A9E92 /* CharacterStoryboard.storyboard */,
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		FFC018F92972F64D001A9E92 /* Episodes */ = {
+			isa = PBXGroup;
+			children = (
+				FFC018FF2973260A001A9E92 /* TableCells */,
+				FF5E7C162961E93C00A0D39F /* EpisodesViewController.swift */,
+				FFC018FA2972F66C001A9E92 /* EpisodeStoryboard.storyboard */,
+			);
+			path = Episodes;
+			sourceTree = "<group>";
+		};
+		FFC018FC2972F715001A9E92 /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				FF5E7C122961E91600A0D39F /* LocationViewController.swift */,
+				FFC018FD2972F72E001A9E92 /* LocationStoryboard.storyboard */,
+			);
+			path = Locations;
+			sourceTree = "<group>";
+		};
+		FFC018FF2973260A001A9E92 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				FFC019002973F892001A9E92 /* EpisodeTableViewCell.swift */,
+				FFC019012973F892001A9E92 /* EpisodeTableViewCell.xib */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
+		FFC019042974529E001A9E92 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FFC0190529745F15001A9E92 /* UITableViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +266,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFC018F82972F3B0001A9E92 /* CharacterStoryboard.storyboard in Resources */,
+				FFC019032973F892001A9E92 /* EpisodeTableViewCell.xib in Resources */,
+				FFC018FE2972F72E001A9E92 /* LocationStoryboard.storyboard in Resources */,
+				FFC018FB2972F66C001A9E92 /* EpisodeStoryboard.storyboard in Resources */,
 				FF5E7C032961E22000A0D39F /* LaunchScreen.storyboard in Resources */,
 				FF5E7C002961E22000A0D39F /* Assets.xcassets in Resources */,
 			);
@@ -221,12 +283,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF5E7C172961E93C00A0D39F /* EpisodesViewController.swift in Sources */,
+				FFC019022973F892001A9E92 /* EpisodeTableViewCell.swift in Sources */,
 				FFEA0E8F296B020C007C6273 /* LocationsModel.swift in Sources */,
 				FF5E7C132961E91600A0D39F /* LocationViewController.swift in Sources */,
 				FFEA0E91296B0396007C6273 /* EpisodesModel.swift in Sources */,
 				FF5E7C112961E90D00A0D39F /* CharacterViewController.swift in Sources */,
 				FFEA0E8D296AFFFB007C6273 /* CharactersModel.swift in Sources */,
 				FFEA0E89296AFC12007C6273 /* APIHandler.swift in Sources */,
+				FFC0190629745F15001A9E92 /* UITableViewExtension.swift in Sources */,
 				FF54F690296D73E2006D433A /* ErrorCases.swift in Sources */,
 				FFEA0E87296AEF83007C6273 /* URLManager.swift in Sources */,
 				FFEA0E95296B20C7007C6273 /* CharacterGender.swift in Sources */,

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Episodes View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="EpisodeStoryboard" id="Y6W-OH-hqX" customClass="EpisodesViewController" customModule="RickAndMortyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zZQ-ek-szi">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHd-E5-CPZ">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="NO DATA " translatesAutoresizingMaskIntoConstraints="NO" id="OyR-RM-Qne">
+                                        <rect key="frame" x="59.666666666666657" y="169.66666666666663" width="274" height="320"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="OyR-RM-Qne" firstAttribute="centerY" secondItem="iHd-E5-CPZ" secondAttribute="centerY" constant="-50" id="ahC-IZ-YM5"/>
+                                    <constraint firstItem="OyR-RM-Qne" firstAttribute="centerX" secondItem="iHd-E5-CPZ" secondAttribute="centerX" id="m5v-Pj-BmP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="zZQ-ek-szi" secondAttribute="bottom" id="TQi-FN-jnO"/>
+                            <constraint firstItem="zZQ-ek-szi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="X5I-TT-0yE"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zZQ-ek-szi" secondAttribute="trailing" id="ewr-17-UYz"/>
+                            <constraint firstItem="iHd-E5-CPZ" firstAttribute="leading" secondItem="zZQ-ek-szi" secondAttribute="leading" id="fAq-V9-qpd"/>
+                            <constraint firstItem="iHd-E5-CPZ" firstAttribute="top" secondItem="zZQ-ek-szi" secondAttribute="top" id="jiP-6j-fQm"/>
+                            <constraint firstItem="zZQ-ek-szi" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="oEu-lF-2fx"/>
+                            <constraint firstItem="iHd-E5-CPZ" firstAttribute="trailing" secondItem="zZQ-ek-szi" secondAttribute="trailing" id="rhM-M4-1xP"/>
+                            <constraint firstItem="iHd-E5-CPZ" firstAttribute="bottom" secondItem="zZQ-ek-szi" secondAttribute="bottom" id="vFG-1e-FqF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="errorView" destination="iHd-E5-CPZ" id="nep-Lg-S9D"/>
+                        <outlet property="mainTableView" destination="zZQ-ek-szi" id="j0Y-Cw-lBB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NO DATA " width="274" height="320"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
