@@ -44,7 +44,7 @@ final class EpisodesViewController: UIViewController {
     }
     
     //MARK: API CALL
-    func getData(isInitial: Bool = false) {
+    private func getData(isInitial: Bool = false) {
         if !isInitial && nextURL == nil {
             return
         }

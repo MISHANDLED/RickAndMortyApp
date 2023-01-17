@@ -10,7 +10,7 @@ import Foundation
 
 struct LocationsResult: Decodable {
     let results: [SeriesLocation]?
-    let next: String?
+    let info: AdditionalInfo?
     
     struct SeriesLocation: Decodable {
         let locationID: Int?
@@ -26,5 +26,9 @@ struct LocationsResult: Decodable {
             case locationDimension = "dimension"
             case locationCharacters = "residents"
         }
+    }
+    
+    struct AdditionalInfo: Decodable {
+        let next: String?
     }
 }

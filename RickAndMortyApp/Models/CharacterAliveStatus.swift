@@ -7,8 +7,8 @@
 
 import Foundation
 
-enum CharacterAliveStatus: Decodable {
-    case dead
-    case alive
-    case unknown
+enum CharacterAliveStatus: String, Decodable {
+    case dead = "Dead"
+    case alive = "Alive"
+    case unknown = "unknown"
 }

@@ -10,7 +10,7 @@ import Foundation
 
 struct CharactersResult: Decodable {
     let results: [SeriesCharacter]?
-    let next: String?
+    let info: AdditionalInfo?
     
     struct SeriesCharacter: Decodable {
         let id: Int?
@@ -32,5 +32,9 @@ struct CharactersResult: Decodable {
             let name: String?
             let url: String?
         }
+    }
+    
+    struct AdditionalInfo: Decodable {
+        let next: String?
     }
 }

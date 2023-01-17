@@ -7,9 +7,9 @@
 
 import Foundation
 
-enum CharacterGender: Decodable {
-    case male
-    case female
-    case genderless
-    case unknown
+enum CharacterGender: String, Decodable {
+    case male = "Male"
+    case female = "Female"
+    case genderless = "Genderless"
+    case unknown = "unknown"
 }
