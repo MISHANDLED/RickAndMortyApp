@@ -21,9 +21,7 @@ final class CharacterViewController: UIViewController {
     var nextURL: String?
     var results = [CharactersResult.SeriesCharacter]() {
         didSet {
-            DispatchQueue.main.async { [weak self] in
-                self?.mainCollectionView.reloadData()
-            }
+            mainCollectionView.reloadData()
         }
     }
     
@@ -45,7 +43,7 @@ final class CharacterViewController: UIViewController {
             params["page"] = String(pageNo)
         }
         
-        APIHanlder.instance.request(endpoint: .character, expecting: CharactersResult.self) { [weak self] result in
+        APIHanlder.instance.request(endpoint: .character, expecting: CharactersResult.self, params: params) { [weak self] result in
             switch result {
             case .success(let response):
                 self?.nextURL = response.info?.next
@@ -67,24 +65,36 @@ extension CharacterViewController: UICollectionViewDataSource, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(CharacterCollectionViewCell.self, indexPath) {
             let data = results[indexPath.row]
-            cell.setupData(imageURL: data.image, name: data.name)
+            cell.setupData(imageURL: data.image)
             cell.backgroundColor = .red
             return cell
         }
         return UICollectionViewCell()
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == results.count - 1 {
+            getData()
+        }
+    }
+    
 }
 
 extension CharacterViewController {
     private func createLayout() -> UICollectionViewCompositionalLayout {
         let item = CompositeViewHelper.itemSet(width: .fractionalWidth(1),
-                                               height: .estimated(400),
+                                               height: .fractionalHeight(1),
                                                spacing: 0)
         
         let group = CompositeViewHelper.groupSet(alignment: .horizontal,
-                                                 width: .fractionalWidth(0.5),
-                                                 height: .fractionalHeight(1),
-                                                 items: [item])
+                                                 width: .fractionalWidth(1),
+                                                 height: .fractionalHeight(1/3),
+                                                 items: item,
+                                                 count: 3)
         
         let section = NSCollectionLayoutSection(group: group)
     

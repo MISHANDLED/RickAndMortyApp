@@ -38,13 +38,6 @@ class NetworkRequestBuilder {
     }
     
     func getRequest() -> URL? {
-        switch endpoint {
-        case .character:
-            return URL(string: urlRequest)
-        case .location:
-            return URL(string: urlRequest)
-        case .episode:
-            return URL(string: urlRequest)
-        }
+        return URL(string: urlRequest)
     }
 }

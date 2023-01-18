@@ -8,15 +8,13 @@
 import UIKit
 
 final class EpisodesViewController: UIViewController {
-
+    
     var nextURL: String?
     var results = [EpisodesResult.SeriesEpisode]() {
         didSet {
-            DispatchQueue.main.async {[weak self] in
-                self?.errorView.isHidden = true
-                self?.mainTableView.removeTableFooter()
-                self?.mainTableView.reloadData()
-            }
+            errorView.isHidden = true
+            mainTableView.removeTableFooter()
+            mainTableView.reloadData()
         }
     }
     

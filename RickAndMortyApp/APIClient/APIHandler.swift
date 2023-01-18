@@ -19,7 +19,9 @@ final class APIHanlder {
                              _ completion: @escaping ((Result<T, ErrorHandler>) -> Void)) {
         guard let url = NetworkRequestBuilder(endpoint: endpoint, params: params, id: id).getRequest(),
               let request = createRequest(from: url) else {
-            completion(.failure(.InvalidURL))
+            DispatchQueue.main.async {
+                completion(.failure(.InvalidURL))
+            }
             return
         }
         print("----------Start of Request----------")
@@ -33,14 +35,20 @@ final class APIHanlder {
                 print("----------End of Response----------\n")
                 do {
                     let result = try JSONDecoder().decode(T.self, from: data)
-                    completion(.success(result))
+                    DispatchQueue.main.async {
+                        completion(.success(result))
+                    }
                 } catch (let error) {
                     print("Error in Parsing Endpoint:\(endpoint.description):\n\(error)")
-                    completion(.failure(.ErrorInParsing(error)))
+                    DispatchQueue.main.async {
+                        completion(.failure(.ErrorInParsing(error)))
+                    }
                 }
                 return
             }
-            completion(.failure(.InternalServerError(error)))
+            DispatchQueue.main.async {
+                completion(.failure(.InternalServerError(error)))
+            }
         }
         
         task.resume()
