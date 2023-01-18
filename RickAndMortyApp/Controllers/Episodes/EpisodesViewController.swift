@@ -35,7 +35,6 @@ final class EpisodesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red.withAlphaComponent(1)
         title = "Episode View"
         errorView.isHidden = false
         getData(isInitial: true)
