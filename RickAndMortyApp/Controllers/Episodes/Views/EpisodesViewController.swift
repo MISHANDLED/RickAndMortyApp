@@ -17,6 +17,7 @@ final class EpisodesViewController: UIViewController {
             mainTableView.reloadData()
         }
     }
+    private var isAPICallinProgress = false
     
     @IBOutlet weak var mainTableView: UITableView! {
         didSet {
@@ -42,9 +43,12 @@ final class EpisodesViewController: UIViewController {
     
     //MARK: API CALL
     private func getData(isInitial: Bool = false) {
-        if !isInitial && nextURL == nil {
+        if !isInitial && nextURL == nil || isAPICallinProgress {
             return
         }
+        
+        isAPICallinProgress = true
+        
         var params: [String : String] = [:]
         if let nextURL = nextURL,
            let pageNo = nextURL.split(separator: "=").last {
@@ -64,6 +68,7 @@ final class EpisodesViewController: UIViewController {
                     self?.mainTableView.removeTableFooter()
                 }
             }
+            self?.isAPICallinProgress = false
         }
     }
 }

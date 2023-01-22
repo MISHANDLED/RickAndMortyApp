@@ -15,7 +15,7 @@ final class LocationViewController: UIViewController {
         
         APIHanlder.instance.request(endpoint: .location, expecting: EpisodesResult.self) { result in
             switch result {
-            case .success(let _):
+            case .success(_):
                 print("response is good")
             case .failure(let error):
                 print("Something went wrong \(error)")

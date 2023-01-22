@@ -25,6 +25,8 @@ final class CharacterViewController: UIViewController {
         }
     }
     
+    private var isAPICallinProgress = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Character View"
@@ -32,9 +34,11 @@ final class CharacterViewController: UIViewController {
     }
     
     private func getData(isInitial: Bool = false) {
-        if !isInitial && nextURL == nil {
+        if !isInitial && nextURL == nil || isAPICallinProgress {
             return
         }
+        
+        isAPICallinProgress = true
         
         var params: [String : String] = [:]
         if let nextURL = nextURL,
@@ -52,6 +56,7 @@ final class CharacterViewController: UIViewController {
             case .failure(let error):
                 print("Something went wrong \(error)")
             }
+            self?.isAPICallinProgress = false
         }
     }
 }
@@ -72,7 +77,11 @@ extension CharacterViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath)
+        if let data = results[safe: indexPath.row],
+           let vc = UIStoryboard(name: "CharacterModalPresentationStoryboard", bundle: nil).instantiateViewController(withIdentifier: "CharacterModalPresentationStoryboard") as? CharacterModalPresentation {
+            vc.data = data
+            self.navigationController?.present(vc, animated: true)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
@@ -80,7 +89,6 @@ extension CharacterViewController: UICollectionViewDataSource, UICollectionViewD
             getData()
         }
     }
-    
 }
 
 extension CharacterViewController {
